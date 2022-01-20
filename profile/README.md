@@ -1,4 +1,4 @@
-![Ultra Tendency Bulls](https://raw.githubusercontent.com/ultratendency/.github/main/profile/bulls.png)
+![Ultra Tendency Bulls](https://raw.githubusercontent.com/ultratendency/.github/main/profile/github-header.png)
 
 Are you passionate about Big Data and Cloud Services? Excited to bring sense to Data? You want to create real value?
 Are you looking for open-source addicted data lovers like yourself? We are Ultra Tendency: An international System
