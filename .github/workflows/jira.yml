@@ -1,0 +1,24 @@
+---
+name: Jira
+
+on:
+  pull_request_target:
+
+jobs:
+  issue:
+    name: Issue creator
+
+    # Ensure that the PR is coming from Dependabot and didn't already create a ticket
+    if: github.actor == 'dependabot[bot]' && !(startsWith(github.event.pull_request.title, 'UII-'))
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Create Jira ticket
+        uses: ultratendency/internal-composite-actions/jira@v1.2.0
+        with:
+          additional-label: "github"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          jira-api-token: ${{ secrets.JIRA_API_TOKEN }}
+          jira-base-url: ${{ secrets.JIRA_BASE_URL }}
+          jira-basic-token: ${{ secrets.JIRA_BASIC_TOKEN }}
+          jira-user-email: ${{ secrets.JIRA_USER_EMAIL }}
